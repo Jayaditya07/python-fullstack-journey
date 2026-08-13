@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(https://cdn.dribbble.com/userupload/40925510/file/original-e794f7e56fabef47421fe98b230e8c8f.gif);
+    background-position: center;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+Form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
