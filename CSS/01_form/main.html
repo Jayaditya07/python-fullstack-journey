@@ -3,37 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loginform</title>
-    <link rel="stylesheet" href="16_loginform.css">
+    <title>SignIn Page</title>
+    <script src="https://kit.fontawesome.com/ed73c55eb5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h2>Design Order Form</h2>
+        
+        
 
-        <div class=" Form">
-            <form>
-
-                <label>Choose Design</label>
-                <select>
-                    <option>House Design</option>
-                    <option>Interior Design</option>
-                    <option>Website Design</option>
-                </select>
-
-                <label>Name</label>
-                <input type="text" placeholder="Enter your Name">
-
-                <label >Email</label>
-                <input type="text" placeholder="Enter your Email">
-
-                <label>Phone</label>
-                <input type="text" placeholder="Enter your Phone">
-
-                <label>Address</label>
-                <input type="text" placeholder="Enter your Address">
-            </form>
+        <h1>Sign Up</h1>
+        <div class="awsome">
+        <i class="fa-brands fa-instagram"  awsome></i>
+        <i class="fa-brands fa-github"  awsome></i>
+        <i class="fa-brands fa-linkedin"  awsome></i>
+        <i class="fa-brands fa-twitter"  awsome></i> 
         </div>
+        
+        <form action="/signup" method="POST"></form>
+        
+        <div class="input_box">
+            <label><i class="fa-regular fa-user"></i></label>
+            <input type="text" name="name" placeholder="Username">
+        </div>
+
+        <div class="input_box">
+            <label><i class="fa-regular fa-envelope"></i></label>
+            <input type="email" name="email" placeholder="Email">
+        </div>
+        <div class="input_box">
+            <label><i class="fa-solid fa-lock"></i></label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+
+
+        <div class="term">
+        <input type="checkbox" >I accept term
+        </div>
+        
+        <button> SignUp</button>
+        </form>
     </div>
     
 </body>
