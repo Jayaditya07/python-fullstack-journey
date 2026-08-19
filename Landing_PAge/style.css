@@ -37,6 +37,15 @@ nav{
     padding: 20px;
     
 }
+
+.sign{
+
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 a{
     text-decoration: none;
 }
@@ -81,4 +90,31 @@ main{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+
+}
+
+#btn1{
+    /* border: 2px solid red; */
+    border-radius: 100px;
+    padding: 5px;
+    /* margin: 20px; */
+    height: 20px;
+    
+}
+
+#btn2{
+    /* border: 2px solid red; */
+    border-radius: 100px;
+    padding: 5px;
+    margin: 20px;
+    
 }
