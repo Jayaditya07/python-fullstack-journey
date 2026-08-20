@@ -1,120 +1,105 @@
-
 *{
+    padding:0;
     margin: 0;
-    border: 0;
     font-family: sans-serif;
+    text-decoration: none;
 }
-
 
 body{
 
-    background-color: #FFFFFF
-    
-
-    
+    background-color: #FFFFFF;
 }
-
-nav{
-    background-color:#FAF9F6;
-    /* text-decoration: none; */
-}
-
-.navbar{
-
-    /* border: 2px solid red; */
+.container{
+     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+
+
+.apple{
+
     padding: 20px;
     
-    
-   
 }
-.nav-links{
-    /* border: 2px solid red; */
-    display: flex;
+
+
+.tages{
+    
+    padding: 20px;
     justify-content: space-evenly;
-    gap: 3rem;
-    padding: 20px;
-    
+    align-items: center;
+    gap: 70px;
+}
+.tages a{
+    margin-right: 30px;
+}
+.tages i{
+    margin-left: 2px;
 }
 
-.sign{
+.main-container{
 
-    border: 2px solid red;
+    
+    height: 500px;
+    width: 90%x;
+}
+.box{
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-}
-a{
-    text-decoration: none;
-}
-main{
-    display: flex;
-    justify-content: center;
-}
-
-.box1{
-    
-    height: 450px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-right: 100px;
-
-}
-.box1 h1{
-    
-    margin-bottom: 20px;
-}
-.box1 p{
-
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.box2{
-    
-    height: 450px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(https://assets-v2.lottiefiles.com/a/43c5dbb8-1189-11ee-9213-9311bc01c8b8/zXDCmmxe7b.gif);
+    /* background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202503/m4-macbook-air-062946941-16x9_0.png?VersionId=0icjj0N8HfLF9dcI4Q.93FZgd1m7G50Y); */
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.btns{
+.box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-container-2{
+
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+}
+
+h2{
+   
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 15rem; */
+    padding: 20px;
+    margin-left: 20px; 
+}
+
+.main-container-2-box-1{
+
+    /* border: 2px solid red; */
+    
+    height: 500px;
+    width: 50%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    
-
+    margin: auto;
+     background-color: black;
+     color:  white;
 }
 
-#btn1{
-    /* border: 2px solid red; */
-    border-radius: 100px;
-    padding: 5px;
-    /* margin: 20px; */
-    height: 20px;
-    
-}
+.main-container-2-box-1 {
 
-#btn2{
-    /* border: 2px solid red; */
-    border-radius: 100px;
-    padding: 5px;
-    margin: 20px;
-    
+
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCsJ5phZ6CDF_b3gjQwzyOdK0xuj4SR0bylW9N0XsiCe9xSRpKghdlUPA&s=10);
+    height: 10%;
 }
