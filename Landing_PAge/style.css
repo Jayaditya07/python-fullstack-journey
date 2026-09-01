@@ -111,6 +111,7 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 19px;
+    
 }
 
 #card-1{
@@ -120,8 +121,18 @@ main{
     border-radius: 20px;
     background-color: ghostwhite;
     overflow: hidden;
-    box-shadow: 0,2px,4px lightgrey;
+    box-shadow: 0 2px 4px lightgrey;
+    cursor: pointer;
+
+
     
+}
+
+#card-1:hover{
+
+    transform: scale(1.02);
+    transition: 2s;
+
 }
 
 #card-1 img{
@@ -168,6 +179,12 @@ button:hover{
     overflow: hidden;
     box-shadow: 0.2px, 4px, lightgrey;
 
+}
+
+#card-2:hover{
+
+    transform: scale(1.02);
+    transition: 2s;
 }
 
 #card-2 img{
@@ -221,6 +238,12 @@ button:hover{
 
 }
 
+#card-3:hover{
+
+    transform: scale(1.02);
+    transition: 2s;
+}
+
 #card-3 img{
 
     height: 60%;
@@ -271,6 +294,12 @@ button:hover{
 
 }
 
+#card-4{
+
+    transform: scale(1.02);
+    transition: 2s;
+}
+
 #card-4 img{
 
     height: 60%;
@@ -319,6 +348,11 @@ button:hover{
     overflow: hidden;
     box-shadow: 0.2px, 4px, lightgrey;
 
+}
+
+#card-5{
+
+    transform: ;
 }
 
 #card-5 img{

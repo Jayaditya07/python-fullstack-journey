@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(215, 219, 217);
+}
+
+nav{
+
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav #logo{
+
+    border: 2px solid red;
+    
+}
+
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}

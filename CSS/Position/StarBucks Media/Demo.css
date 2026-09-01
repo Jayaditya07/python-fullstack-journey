@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: snow;
+    color: black;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+nav 
+{
+    position: fixed;
+    width: 100vw;
+    background-color: snow;
+    z-index: 100;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* column-gap: 20%; */
+
+}
+
+nav img
+{
+    width: 80px;
+}
+
+#SearchBar
+{
+    width: 40%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    
+}
+
+
+#SearchBar input
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 20px;
+    background: transparent;
+
+}
+
+#SearchBar img
+{
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+nav ul li
+{
+    padding: 10px 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+nav ul li:hover
+{
+    color: #017143;
+    transform: scale(1.1);
+}
+#About
+{
+    background-color: #017143;
+    color: white;
+    border-radius: 25px;
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: end;
+   
+}
+
+#First
+{
+    height: 85%;
+    flex: 1;
+    /* border: 1px solid red; */
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+#Content
+{
+    position: relative;
+    top: 150px;
+    /* border: 2px solid blue; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#Content h2
+{
+    font-family: sans-serif;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    letter-spacing: 5px;
+}
+#Content h2 span
+{
+    color: #017143;
+}
+
+#Btns
+{
+    /* border: 2px solid red; */
+    position: relative;
+    top: 100px;
+    display: flex;
+    column-gap: 20px;
+}
+
+#OrderBtn{
+    transition: 0.4s;
+    width: 160px;
+    height: 45px;
+    background-color: #017143;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#CartBtn{
+    transition: 0.4s;
+    cursor: pointer;
+    user-select: none;
+    width: 160px;
+    height: 45px;
+    padding: 0 10px;
+    background-color: rgb(215, 214, 214);
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#CartBtn img
+{
+    transition: 0.4s;
+}
+
+
+#OrderBtn:hover
+{
+    transform: scale(1.1);
+}
+#CartBtn:hover
+{
+    transform: scale(1.1);
+}
+#CartBtn:hover img
+{
+    transform: rotate(-20deg) scale(1.2);
+}
+
+#Line
+{
+    height: 4px;
+    width: 80%;
+    background-color: #017143;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+#Content p
+{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    width: 60%;
+}
+
+#Second
+{
+    height: 85%;
+    flex: 1;
+    /* border: 2px solid red; */
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+
+#Blob
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: -30%;
+    bottom: -15%;
+    transform: rotate(30deg);
+
+}
+
+
+#Coffee
+{
+    height: 90%;
+    position: relative;
+    top: 50px;
+    left: 200px;
+    transition: .3s;
+}
+
+#Second:hover #Coffee
+{
+    transform: rotate(10deg) scale(1.1);
+}
