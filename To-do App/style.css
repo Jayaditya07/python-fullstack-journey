@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+
+    background-color: #E9F0FE;
+}
+
+nav{
+
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+.content{
+
+    background-color: aqua;
+    height: 500px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
