@@ -6,30 +6,57 @@
 
 body{
 
-    background-color: #E9F0FE;
+    background-color:#F5F4FD;
 }
 
-nav{
+.icon{
 
-    border: 2px solid red;
+    background-color: #604CBC;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    gap: 10px;
+    color: white;
 }
 
-nav ul{
+.add-task{
 
-    list-style: none;
-    display: flex;
-    column-gap: 20px;
-}
-
-.content{
-
-    background-color: aqua;
-    height: 500px;
-    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+
+}
+
+#input{
+
+    width:500px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+button{
+
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #604CBC;
+    color: white;
+    width: 120px;
+    margin-left: 10px;
+}
+.task-section{
+    /* border: 2px solid red; */
+
+    
+    
+}
+
+.task-heading{
+    display: flex;
+    justify-content: space-between;
+   
 }
