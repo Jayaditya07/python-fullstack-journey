@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <div class="icon">
-                
-           
-            <h1> To Do App</h1>
-
-            <p>Organize your tasks and get things done</p>
+                <h1>To Do App</h1>
+                <p>Organize your tasks and get things done</p>
             </div>
         </header>
+
         <section class="add-task">
-
-        <input id="input" type="text" placeholder="Enter your Task">
-        <button id="addTaskBtn">+ Add Task</button>
-
+            <input id="input" type="text" placeholder="Enter your Task" aria-label="Task input">
+            <button id="addTaskBtn" type="button">+ Add Task</button>
         </section>
 
         <section class="task-section">
             <div class="task-heading">
                 <h2>Tasks</h2>
-            
-            <div class="filter">
-                <button class="active">All</button>
-                <button>Pending</button>
-                <button>Update</button>
-            </div>
-
+                <div class="filter">
+                    <button class="active" type="button">All</button>
+                    <button type="button">Pending</button>
+                    <button type="button">Update</button>
+                </div>
             </div>
         </section>
     </div>
-    
 </body>
+
 </html>

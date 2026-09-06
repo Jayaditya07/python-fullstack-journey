@@ -1,51 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn Page</title>
-    <script src="https://kit.fontawesome.com/ed73c55eb5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+// main.js – Handles form validation and submission for the Sign‑Up page
 
-    <div class="container">
-        
-        
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signupForm');
 
-        <h1>Sign Up</h1>
-        <div class="awsome">
-        <i class="fa-brands fa-instagram"  awsome></i>
-        <i class="fa-brands fa-github"  awsome></i>
-        <i class="fa-brands fa-linkedin"  awsome></i>
-        <i class="fa-brands fa-twitter"  awsome></i> 
-        </div>
-        
-        <form id="signupForm" action="/signup" method="POST">
-        
-        <div class="input_box">
-            <label><i class="fa-regular fa-user"></i></label>
-            <input type="text" name="name" placeholder="Username">
-        </div>
+    // Helper to create or update an error message element
+    const setError = (input, message) => {
+        let errorEl = input.parentElement.querySelector('.error');
+        if (!errorEl) {
+            errorEl = document.createElement('div');
+            errorEl.className = 'error';
+            input.parentElement.appendChild(errorEl);
+        }
+        errorEl.textContent = message;
+    };
 
-        <div class="input_box">
-            <label><i class="fa-regular fa-envelope"></i></label>
-            <input type="email" name="email" placeholder="Email">
-        </div>
-        <div class="input_box">
-            <label><i class="fa-solid fa-lock"></i></label>
-            <input type="password" name="password" placeholder="Password">
-        </div>
+    const clearError = (input) => {
+        const errorEl = input.parentElement.querySelector('.error');
+        if (errorEl) errorEl.textContent = '';
+    };
 
+    // Simple email regex (RFC‑5322‑compatible subset)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        <div class="term">
-        <input type="checkbox" >I accept term
-        </div>
-        
-        <button type="submit"> SignUp</button>
-        </form>
-    </div>
-    
-<script src="main.js"></script>
-</body>
-</html>
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent default form post
+
+        // Grab inputs
+        const usernameInput = form.querySelector('input[name="name"]');
+        const emailInput = form.querySelector('input[name="email"]');
+        const passwordInput = form.querySelector('input[name="password"]');
+        const termsCheckbox = form.querySelector('input[type="checkbox"]');
+
+        // Reset previous errors
+        [usernameInput, emailInput, passwordInput].forEach(clearError);
+        const termsError = form.querySelector('.terms-error');
+        if (termsError) termsError.textContent = '';
+
+        // Validation flags
+        let isValid = true;
+
+        // Username validation
+        if (!usernameInput.value.trim()) {
+            setError(usernameInput, 'Username is required.');
+            isValid = false;
+        }
+
+        // Email validation
+        if (!emailInput.value.trim()) {
+            setError(emailInput, 'Email is required.');
+            isValid = false;
+        } else if (!emailRegex.test(emailInput.value.trim())) {
+            setError(emailInput, 'Please enter a valid email address.');
+            isValid = false;
+        }
+
+        // Password validation
+        if (!passwordInput.value) {
+            setError(passwordInput, 'Password is required.');
+            isValid = false;
+        } else if (passwordInput.value.length < 6) {
+            setError(passwordInput, 'Password must be at least 6 characters.');
+            isValid = false;
+        }
+
+        // Terms & Conditions validation
+        if (!termsCheckbox.checked) {
+            let err = form.querySelector('.terms-error');
+            if (!err) {
+                err = document.createElement('div');
+                err.className = 'terms-error error';
+                termsCheckbox.parentElement.appendChild(err);
+            }
+            err.textContent = 'You must accept the terms.';
+            isValid = false;
+        }
+
+        if (!isValid) return; // Stop if any validation failed
+
+        // Build payload
+        const payload = {
+            name: usernameInput.value.trim(),
+            email: emailInput.value.trim(),
+            password: passwordInput.value
+        };
+
+        try {
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                const errData = await response.json().catch(() => ({}));
+                const msg = errData.message || `Server responded with ${response.status}`;
+                throw new Error(msg);
+            }
+
+            // Assuming the server returns JSON with a success message
+            const data = await response.json();
+            alert(data.message || 'Sign‑up successful!');
+            form.reset(); // Clear form after successful submission
+        } catch (err) {
+            console.error('Signup error:', err);
+            alert(`Signup failed: ${err.message}`);
+        }
+    });
+});
