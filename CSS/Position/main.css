@@ -6,7 +6,7 @@
 
 body{
 
-    background-color: rgb(215, 219, 212);
+    background-color: rgb(236, 238, 234);
 }
 
 nav
@@ -16,6 +16,9 @@ nav
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 nav img{
 
@@ -73,7 +76,7 @@ main{
 
 .container{
 
-     border: 2px solid red;
+    
     height: 95%;
     width: 98%;
     box-shadow: 0 0 2px 2px lightgray;
@@ -109,6 +112,7 @@ main{
     position: absolute;
     height: 300px;
     transition: .2s;
+    
 }
 
 #coffee:hover{
@@ -127,15 +131,81 @@ main{
 
 
     position: relative;
-    left: 100px;
     top: 80px;
+    left: 40px;
+    transition: all 0.3s ease;
+    transform-origin: center;
 
 
 }
 
 #contentData h2{
 
-    font-size: 45px;
+    font-size: 35px;
+    color: rgb(41, 40, 40);
 }
 
 
+#contentData h1{
+
+    font-size: 50px;
+    color: rgb(41, 40, 40);;
+}
+
+
+#contentData h1 span{
+
+    font-size: 50px;
+    color: #0b985d;
+}
+
+.line{
+    height: 2px;
+    width: 90%;
+    background-color:#0b985d;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#contentData p{
+
+    margin-top: 20px;
+}
+
+
+#content-button-1
+{
+
+    margin-top: 15px;
+    background-color: #0b985d;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: grey;
+    margin-right: 10px;
+}
+
+#content-button-1:hover
+{
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(11, 152, 93, 0.4);
+    cursor: pointer;
+}
+
+
+#content-button-2
+{
+
+    margin-top: 15px;
+    background-color: #0b985d;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: grey;
+}
+
+#content-button-2:hover
+{
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(11, 152, 93, 0.4);
+    cursor: pointer;
+}
