@@ -1,0 +1,299 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+body > div:first-child h1 {
+    color: #2563eb;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+body > div:first-child h3 {
+    color: #6b7280;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   SUMMARY CARD
+========================= */
+
+.summary {
+    width: 600px;
+    max-width: 100%;
+    background: white;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.summary h1 {
+    font-size: 25px;
+    color: #111827;
+}
+
+#updatedBal {
+    color: #2563eb;
+}
+
+
+/* =========================
+   INCOME & EXPENSE
+========================= */
+
+.total {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.total > div {
+    width: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.total > div:first-child {
+    border-left: 4px solid #22c55e;
+}
+
+.total > div:last-child {
+    border-left: 4px solid #ef4444;
+}
+
+.total h2 {
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+#updatedInc {
+    color: #16a34a;
+}
+
+#updatedExp {
+    color: #dc2626;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.root {
+    width: 95%;
+    max-width: 1200px;
+    background: white;
+    display: flex;
+    margin: auto;
+    padding: 35px;
+    gap: 35px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   EXPENSE TABLE
+========================= */
+
+#items {
+    flex: 1;
+}
+
+#items h2,
+#new h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#table th {
+    background: #2563eb;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+#table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#table tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.vertical {
+    border: none;
+    border-left: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+#new {
+    width: 350px;
+    padding: 10px;
+}
+
+.inputs {
+    margin-top: 10px;
+}
+
+.inputitem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.inputitem p {
+    width: 100px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #374151;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .root {
+        flex-direction: column;
+    }
+
+    #new {
+        width: 100%;
+    }
+
+    .vertical {
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    .total {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .total > div {
+        width: 100%;
+    }
+
+    .root {
+        padding: 20px 10px;
+    }
+
+    #table {
+        font-size: 12px;
+    }
+
+    #table th,
+    #table td {
+        padding: 8px;
+    }
+}
+

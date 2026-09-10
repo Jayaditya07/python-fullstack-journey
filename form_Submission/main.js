@@ -2,13 +2,19 @@
 // Purpose: Capture student data from the form, store entries in an array, and render each student as a card in the display section.
 
 
+
+
 // ==== Config ====
+
+
 let studentform = document.getElementById("studentform"); // Form element for student input
 let displysection = document.getElementById("displysection"); // Container where student cards will be rendered
 
 
 // ==== State ====
-let arr = []; // In‑memory collection of submitted student objects
+
+
+let arr = [];                  // In‑memory collection of submitted student objects
 
 
 // ==== Handlers ====
@@ -18,6 +24,9 @@ let arr = []; // In‑memory collection of submitted student objects
  * Updates the display section with the current list of students.
  * Clears previous content and injects a card for each student object.
  */
+
+
+
 function disply() {
     // Reset the container before re‑rendering
     displysection.innerHTML = "";
@@ -35,12 +44,17 @@ function disply() {
     }
 }
 
+
+
+
 // Process form submission, create a student object, store it, and refresh the UI
 /**
  * Form submit event handler.
  *
  * @param {Event} e - The submit event object.
  */
+
+
 function fun(e) {
     e.preventDefault(); // Prevent default form submission (page reload)
 
@@ -58,6 +72,8 @@ function fun(e) {
 
     disply(); // Re‑render the updated student list
 }
+
+
 
 // ==== Event Bindings ====
 studentform.addEventListener("submit", fun); // Attach submit handler to the form
