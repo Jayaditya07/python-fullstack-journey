@@ -1,0 +1,298 @@
+/* =========================================================
+   Module: Form & Student Card UI Styles
+   Purpose: Provides reset, layout, form styling, student card
+            components, and responsive behavior.
+   Key Components:
+     - Reset styles
+     - Page base styles
+     - Main container flex layout
+     - Form card and form elements
+     - Student card with hover effects
+     - Responsive adjustments for tablets and mobiles
+   ------------------------------------------------------- */
+
+/* =========================
+   RESET
+   -------------------------
+   Removes default margins/paddings and sets a universal
+   box-sizing model.
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   PAGE
+   -------------------------
+   Base typography and background for the page.
+   ========================== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* =========================
+   MAIN CONTAINER
+   -------------------------
+   Flex container that centers child sections and provides
+   spacing via gap and padding.
+   ========================== */
+.Main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 60px 30px;
+}
+
+/* =========================
+   FORM CARD
+   -------------------------
+   Wrapper for the form with background, border, and shadow.
+   ========================== */
+#formsection {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   FORM
+   -------------------------
+   Ensures the form occupies full width of its container.
+   ========================== */
+#studentform {
+    width: 100%;
+}
+
+/* =========================
+   FORM GROUP
+   -------------------------
+   Spacing between individual form fields.
+   ========================== */
+#studentform > div {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   LABEL
+   -------------------------
+   Styling for form field labels.
+   ========================== */
+#studentform p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   INPUT & SELECT
+   -------------------------
+   Unified styling for text inputs and dropdowns.
+   ========================== */
+input,
+select {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+
+    font-size: 15px;
+    color: #111827;
+
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   INPUT FOCUS
+   -------------------------
+   Visual feedback when inputs receive focus.
+   ========================== */
+input:focus,
+select:focus {
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+/* =========================
+   PLACEHOLDER
+   -------------------------
+   Placeholder text color.
+   ========================== */
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* =========================
+   BUTTON
+   -------------------------
+   Primary action button styling.
+   ========================== */
+button {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   BUTTON HOVER
+   -------------------------
+   Hover state with subtle lift and shadow.
+   ========================== */
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================
+   BUTTON CLICK
+   -------------------------
+   Active state resets lift.
+   ========================== */
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   DISPLAY SECTION
+   -------------------------
+   Container for rendered student cards.
+   ========================== */
+#displysection {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* =========================
+   STUDENT CARD
+   -------------------------
+   Card component displaying student details with hover effect.
+   ========================== */
+.student-card {
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 28px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+/* Top blue line */
+.student-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #2563eb;
+}
+
+/* Card hover */
+.student-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.10);
+}
+
+/* Student name */
+.student-card h2 {
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 18px;
+}
+
+/* Student information tags */
+.student-card p {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    margin-right: 8px;
+
+    background: #f3f4f6;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #4b5563;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================== */
+
+/* Adjust layout for tablets (≤900px) */
+@media (max-width: 900px) {
+
+    .Main {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    #formsection,
+    #displysection {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+/* Adjust layout for small mobiles (≤500px) */
+@media (max-width: 500px) {
+
+    #formsection {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .Main {
+        padding: 20px 15px;
+    }
+}

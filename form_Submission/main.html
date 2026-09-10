@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Module: Student Form Page
+Purpose: Collect student details (name, age, avatar URL, class) and display them.
+Key Components: Meta configuration, student input form, display section, external script handling logic.
+-->
+<html lang="en">
+<head>
+    <!-- ==== Config ==== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="Main">
+
+        <!-- ==== State ==== -->
+        <!-- Form Section: captures user input -->
+        <div id="formsection">
+
+            <form id="studentform">
+
+                <div>
+                    <p>Enter your Name</p>
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div>
+                    <p>Enter your Age</p>
+                    <input type="number" placeholder="Age">
+                </div>
+
+                <div>
+                    <p>Enter your Avatar</p>
+                    <input type="text" placeholder="Image URL">
+                </div>
+
+                <div>
+                    <p>Select your Class</p>
+                    <select>
+                        <option>10th</option>
+                        <option>11th</option>
+                        <option>12th</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit">Add New Student</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Display Section: populated by script.js -->
+        <div id="displysection"></div>
+
+    </div>
+
+    <!-- ==== Handlers ==== -->
+    <!-- script.js contains event listeners and DOM manipulation for form submission -->
+    <script src="script.js"></script>
+
+</body>
+</html>
