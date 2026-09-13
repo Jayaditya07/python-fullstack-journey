@@ -1,0 +1,564 @@
+`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="AI Resume Analyzer - Analyze your resume, ATS score, skills and job compatibility."
+    >
+
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div>
+
+            <h2>ResumeAI</h2>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#analyzer">Analyzer</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section id="home">
+
+            <div>
+
+                <p>AI-POWERED RESUME ANALYZER</p>
+
+                <h1>
+                    Build a Resume That
+                    Gets You Noticed
+                </h1>
+
+                <p>
+                    Analyze your resume, improve your ATS score,
+                    identify missing skills and match your resume
+                    with your target job description.
+                </p>
+
+                <a href="#analyzer">
+                    Analyze My Resume
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESUME ANALYZER ================= -->
+
+        <section id="analyzer">
+
+            <div>
+
+                <p>STEP 01</p>
+
+                <h2>Analyze Your Resume</h2>
+
+                <p>
+                    Upload your resume and provide a job description
+                    to get a detailed analysis.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= UPLOAD FORM ================= -->
+
+            <form id="resumeForm">
+
+
+                <!-- Resume Upload -->
+
+                <div>
+
+                    <label for="resume">
+                        Upload Your Resume
+                    </label>
+
+                    <p>
+                        Supported formats: PDF, DOC, DOCX
+                    </p>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        name="resume"
+                        accept=".pdf,.doc,.docx"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Job Description -->
+
+                <div>
+
+                    <label for="jobDescription">
+                        Job Description
+                    </label>
+
+                    <p>
+                        Paste the job description to calculate
+                        your job match score.
+                    </p>
+
+                    <textarea
+                        id="jobDescription"
+                        name="jobDescription"
+                        rows="10"
+                        placeholder="Paste the job description here..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Analyze Button -->
+
+                <div>
+
+                    <button
+                        type="submit"
+                        id="analyzeBtn"
+                    >
+                        Analyze Resume
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================= ANALYSIS RESULTS ================= -->
+
+        <section id="results">
+
+            <div>
+
+                <p>STEP 02</p>
+
+                <h2>Resume Analysis</h2>
+
+                <p>
+                    Review your resume performance and
+                    improvement areas.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= SCORE ================= -->
+
+            <section>
+
+                <h3>Overall Resume Score</h3>
+
+                <p id="resumeScore">
+                    0 / 100
+                </p>
+
+                <p id="scoreMessage">
+                    Upload your resume to generate your score.
+                </p>
+
+            </section>
+
+
+
+            <!-- ================= ATS SCORE ================= -->
+
+            <section>
+
+                <h3>ATS Compatibility</h3>
+
+                <p id="atsScore">
+                    0%
+                </p>
+
+                <p>
+                    Applicant Tracking System compatibility
+                </p>
+
+            </section>
+
+
+
+            <!-- ================= JOB MATCH ================= -->
+
+            <section>
+
+                <h3>Job Match Score</h3>
+
+                <p id="jobMatchScore">
+                    0%
+                </p>
+
+                <p>
+                    Compatibility between your resume
+                    and the selected job description.
+                </p>
+
+            </section>
+
+
+
+            <!-- ================= SKILLS FOUND ================= -->
+
+            <section>
+
+                <h3>Skills Found</h3>
+
+                <ul id="skillsList">
+
+                    <li>
+                        Skills will appear after analysis.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- ================= MISSING SKILLS ================= -->
+
+            <section>
+
+                <h3>Missing Skills</h3>
+
+                <ul id="missingSkills">
+
+                    <li>
+                        Missing skills will appear after analysis.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- ================= KEYWORD ANALYSIS ================= -->
+
+            <section>
+
+                <h3>Keyword Analysis</h3>
+
+
+                <div>
+
+                    <h4>Technical Keywords</h4>
+
+                    <p id="technicalKeywords">
+                        0%
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Industry Keywords</h4>
+
+                    <p id="industryKeywords">
+                        0%
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Action Verbs</h4>
+
+                    <p id="actionVerbs">
+                        0%
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= RECOMMENDATIONS ================= -->
+
+            <section>
+
+                <h3>Resume Recommendations</h3>
+
+                <ol id="recommendations">
+
+                    <li>
+                        Upload your resume to receive
+                        personalized recommendations.
+                    </li>
+
+                </ol>
+
+            </section>
+
+
+
+            <!-- ================= REPORT ================= -->
+
+            <section>
+
+                <h3>Analysis Report</h3>
+
+                <button
+                    type="button"
+                    id="downloadReport"
+                >
+                    Download Report
+                </button>
+
+                <button
+                    type="button"
+                    id="reanalyzeBtn"
+                >
+                    Re-analyze Resume
+                </button>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section id="features">
+
+            <div>
+
+                <p>FEATURES</p>
+
+                <h2>
+                    Everything You Need to Improve Your Resume
+                </h2>
+
+            </div>
+
+
+            <article>
+
+                <h3>ATS Analysis</h3>
+
+                <p>
+                    Check your resume compatibility with
+                    Applicant Tracking Systems.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Skill Detection</h3>
+
+                <p>
+                    Automatically identify technical and
+                    professional skills from your resume.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Job Matching</h3>
+
+                <p>
+                    Compare your resume with a job description
+                    and identify missing keywords.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Smart Recommendations</h3>
+
+                <p>
+                    Get actionable suggestions to improve
+                    your resume.
+                </p>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section id="how-it-works">
+
+            <div>
+
+                <p>HOW IT WORKS</p>
+
+                <h2>
+                    Analyze. Improve. Apply.
+                </h2>
+
+            </div>
+
+
+            <article>
+
+                <h3>01. Upload</h3>
+
+                <p>
+                    Upload your resume in PDF, DOC or DOCX format.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>02. Analyze</h3>
+
+                <p>
+                    Our analyzer scans your resume for
+                    skills, keywords and structure.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>03. Improve</h3>
+
+                <p>
+                    Follow the recommendations and
+                    improve your resume.
+                </p>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about">
+
+            <div>
+
+                <p>ABOUT RESUMEAI</p>
+
+                <h2>
+                    Make Every Job Application Count
+                </h2>
+
+                <p>
+                    ResumeAI helps job seekers understand how
+                    their resume performs before applying for
+                    a job. Analyze your strengths, identify
+                    missing skills and improve your resume
+                    with actionable insights.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h3>ResumeAI</h3>
+
+            <p>
+                Build smarter resumes. Get noticed faster.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="#home">Home</a>
+
+            <a href="#analyzer">Analyzer</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">About</a>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 ResumeAI. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+<script src="main.js"></script>
+
+</html>
+
