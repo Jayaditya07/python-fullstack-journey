@@ -390,7 +390,7 @@ downloadReport.addEventListener("click", function () {
         document.getElementById("atsScore").innerText;
 
     const jobMatchScore =
-        
+        document.getElementById("jobMatchScore").innerText;
 
 
     const report = `
