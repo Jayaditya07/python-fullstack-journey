@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherNow | Weather Dashboard</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i data-lucide="cloud-sun"></i>
+                <h2>Weather<span>Now</span></h2>
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#forecast" class="nav-item">
+                    <i data-lucide="calendar-days"></i>
+                    <span>Forecast</span>
+                </a>
+
+                <a href="#details" class="nav-item">
+                    <i data-lucide="thermometer"></i>
+                    <span>Weather Details</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <i data-lucide="cloud-sun"></i>
+                <p>Every day is a new forecast.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">WEATHER OVERVIEW</p>
+                    <h1>Weather Dashboard</h1>
+                </div>
+
+                <form class="search-box" id="searchForm">
+                    <i data-lucide="search"></i>
+                    <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Search city..."
+                        aria-label="Search city"
+                        required
+                    >
+                    <button type="submit">Search</button>
+                </form>
+            </header>
+
+            <p id="message" class="message" role="status"></p>
+
+            <!-- Current Weather -->
+            <section class="weather-hero" id="currentWeather">
+
+                <div class="hero-content">
+
